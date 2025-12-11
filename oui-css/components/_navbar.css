@@ -88,33 +88,42 @@ nav:is(.left, .right, .top, .bottom) {
 }
 
 nav:is(.left, .right) {
-  inline-size: 5rem;
-  justify-content: flex-start;
+  height: auto;
+  inline-size: 3rem;
+  justify-content: flex-star;
   flex-direction: column;
-  background-color: var(--surface);
+  top: 3.4rem;
+  background-color: var(--control-background);
 }
 
 nav:is(.top, .bottom) {
-  block-size: 5rem;
-  justify-content: center;
-  flex-direction: oui-row;
-  background-color: var(--surface-container);
-}
-
-nav.top {
-  inset-block-end: auto;
+  width: auto;
+  block-size: 3rem;
+  justify-content: space-between;
+  flex-direction: row;
+  align-content: center;
+  background-color: var(--background);
+  box-shadow: 0px 1px 3px 0px rgb(0 0 0 / 0.1);
 }
 
 nav.left {
   float: left;
+  border-radius: 0px 18px 18px 0px;
 }
 
 nav.right {
   float: right;
+  border-radius: 18px 0px 0px 18px;
+}
+
+nav.top {
+  position: sticky;
+  top: 0px;
 }
 
 nav.bottom {
-  inset-block-start: auto;
+  position: sticky;
+  bottom: 0px;
 }
 
 nav.oui-drawer {
@@ -124,7 +133,6 @@ nav.oui-drawer {
   gap: 0;
   padding: 0.5rem 1rem;
   background-color: var(--control-background);
-  border-radius: 0px 18px 18px 0px;
 }
 
 nav.oui-drawer:is(.min, .max) {
