@@ -89,16 +89,16 @@ nav:is(.left, .right, .top, .bottom) {
 
 nav:is(.left, .right) {
   height: auto;
-  inline-size: 3rem;
+  inline-size: 72px;
   justify-content: flex-star;
   flex-direction: column;
-  top: 3.4rem;
+  top: 60px;
   background-color: var(--control-background);
 }
 
 nav:is(.top, .bottom) {
   width: auto;
-  block-size: 3rem;
+  block-size: 48px;
   justify-content: space-between;
   flex-direction: row;
   align-content: center;
@@ -129,7 +129,7 @@ nav.bottom {
 nav.oui-drawer {
   flex-direction: column;
   align-items: center;
-  inline-size: 4rem;
+  inline-size: 72px;
   gap: 0;
   padding: 0.5rem 1rem;
   background-color: var(--control-background);
