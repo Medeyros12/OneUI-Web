@@ -43,3 +43,10 @@ html {
     color: var(--text);
 }
 
+.container {
+    position: sticky;
+    top: auto;
+    bottom: auto;
+    left: auto;
+    right: auto;
+}
