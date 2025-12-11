@@ -117,12 +117,10 @@ nav.right {
 }
 
 nav.top {
-  position: sticky;
   top: 0px;
 }
 
 nav.bottom {
-  position: sticky;
   bottom: 0px;
 }
 
