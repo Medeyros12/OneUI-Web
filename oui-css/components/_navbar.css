@@ -1,0 +1,288 @@
+nav > :is(ol, ul),
+nav > :is(ol, ul) > li {
+  all: unset;
+}
+
+nav,
+.oui-row,
+a.oui-row,
+nav.oui-drawer > :is(a, label),
+nav.oui-drawer > :is(ol, ul) > li > :is(a, label) {
+  display: flex;
+  align-items: center;
+  align-self: normal;
+  text-align: start;
+  justify-content: flex-start;
+  white-space: nowrap;
+  gap: 1rem;
+  margin: 0;
+}
+
+a.oui-row {
+  min-block-size: 3rem;
+}
+
+:is(nav, .oui-row, .max) > :only-child,
+nav > :is(ol, ul) > li > :only-child {
+  margin: 0;
+}
+
+* + :is(nav, .oui-row) {
+  margin-block-start: 1rem;
+}
+
+:is(nav, .oui-row) > * {
+  margin: 0;
+  white-space: normal;
+  flex: none;
+}
+
+:is(nav, .oui-row).no-space {
+  gap: 0;
+}
+
+:is(nav, .oui-row).no-space > .border + .border {
+  border-inline-start: 0;
+}
+
+:is(nav, .oui-row).medium-space {
+  gap: 1.5rem;
+}
+
+:is(nav, .oui-row).large-space {
+  gap: 2rem;
+}
+
+:is(nav, .oui-row) > .max,
+:is(nav, .oui-row) > :is(ol, ul) > .max,
+nav.oui-drawer > :is(a, label) > .max,
+nav.oui-drawer > :is(ol, ul) > li > :is(a, label) > .max {
+  flex: 1;
+}
+
+:is(nav, .oui-row).wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+:is(header, footer) > :is(nav, .oui-row) {
+  min-block-size: inherit;
+}
+
+:is(nav, .oui-row) > .border.no-margin + .border.no-margin {
+  border-inline-start: 0;
+}
+
+nav:is(.left, .right, .top, .bottom) {
+  border: 0;
+  position: fixed;
+  color: var(--on-surface);
+  transform: none;
+  z-index: 100;
+  block-size: auto;
+  inline-size: auto;
+  text-align: center;
+  padding: 0.5rem;
+  margin: 0;
+  inset: 0;
+}
+
+nav:is(.left, .right) {
+  inline-size: 5rem;
+  justify-content: flex-start;
+  flex-direction: column;
+  background-color: var(--surface);
+}
+
+nav:is(.top, .bottom) {
+  block-size: 5rem;
+  justify-content: center;
+  flex-direction: oui-row;
+  background-color: var(--surface-container);
+}
+
+nav.top {
+  inset-block-end: auto;
+}
+
+nav.left {
+  float: left;
+}
+
+nav.right {
+  float: right;
+}
+
+nav.bottom {
+  inset-block-start: auto;
+}
+
+nav.oui-drawer {
+  flex-direction: column;
+  align-items: center;
+  inline-size: 4rem;
+  gap: 0;
+  padding: 0.5rem 1rem;
+  background-color: var(--control-background);
+  border-radius: 0px 18px 18px 0px;
+}
+
+nav.oui-drawer:is(.min, .max) {
+  inline-size: auto;
+}
+
+nav.oui-drawer.max {
+  inline-size: 100%;
+}
+
+:is(nav, .oui-row) > header {
+  background-color: inherit;
+}
+
+nav:is(.left, .right) > header {
+  transform: translateY(-0.5rem);
+}
+
+nav.oui-drawer > header {
+  transform: translateY(-0.75rem);
+  min-block-size: 4.5rem;
+  align-self: stretch;
+}
+
+nav.oui-drawer > :is(a, label),
+nav.oui-drawer > :is(ol, ul) > li > :is(a, label),
+a.oui-row.wave {
+  padding: 0.75rem;
+  font-size: inherit;
+}
+
+nav.oui-drawer > a,
+nav.oui-drawer > :is(ol, ul) > li > a {
+  border-radius: 2rem;
+}
+
+nav.oui-drawer > a:is(:hover, .active),
+nav.oui-drawer > :is(ol, ul) > li > a:is(:hover, .active) {
+  background-color: var(--secondary-container);
+}
+
+nav.oui-drawer > a:is(:hover, :focus, .active) > i,
+nav.oui-drawer > :is(ol, ul) > li > a:is(:hover, :focus, .active) > i {
+  font-variation-settings: "FILL" 1;
+}
+
+nav > :is(ol, ul) {
+  all: inherit;
+  flex: auto;
+}
+
+nav:not(.left, .right, .bottom, .top) > :is(ol, ul) {
+  padding: 0;
+}
+
+nav:is(.left, .right, .top, .bottom):not(.oui-drawer) > a:not(.button, .chip),
+nav:is(.left, .right, .top, .bottom):not(.oui-drawer) > :is(ol, ul) > li > a:not(.button, .chip) {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+}
+
+nav:is(.top, .bottom):not(.oui-drawer) > a:not(.button, .chip),
+nav:is(.top, .bottom):not(.oui-drawer) > :is(ol, ul) > li > a:not(.button, .chip) {
+  inline-size: 3.5rem;
+}
+
+nav:is(.left, .right, .top, .bottom):not(.oui-drawer) > a:not(.button, .chip) > i,
+nav:is(.left, .right, .top, .bottom):not(.oui-drawer) > :is(ol, ul) > li > a:not(.button, .chip) > i {
+  padding: 0.25rem;
+  border-radius: 2rem;
+  transition: padding var(--speed1) linear;
+  margin: 0 auto;
+}
+
+nav:is(.left, .right, .top, .bottom):not(.oui-drawer) > a:not(.button, .chip):is(:hover, :focus, .active) > i,
+nav:is(.left, .right, .top, .bottom):not(.oui-drawer) > :is(ol, ul) > li > a:not(.button, .chip):is(:hover, :focus, .active) > i {
+  background-color: var(--secondary-container);
+  color: var(--on-secondary-container);
+  padding: 0.25rem 1rem;
+  font-variation-settings: "FILL" 1;
+}
+
+:is(nav, .oui-row):is(.left-align, .top-align, .vertical) {
+  justify-content: flex-start;
+}
+
+:is(nav, .oui-row):is(.right-align, .bottom-align) {
+  justify-content: flex-end;
+}
+
+:is(nav, .oui-row):is(.center-align, .middle-align) {
+  justify-content: center;
+}
+
+:is(nav, .oui-row):is(.left-align, .top-align, .vertical).vertical {
+  align-items: flex-start;
+}
+
+:is(nav, .oui-row):is(.right-align, .bottom-align).vertical {
+  align-items: flex-end;
+}
+
+:is(nav, .oui-row):is(.center-align, .middle-align).vertical {
+  align-items: center;
+}
+
+:is(.oui-drawer, .vertical) > :is(li, [class*=divider]):not(.vertical),
+:is(.oui-drawer, .vertical) > :is(ol, ul) > li:not(.vertical) {
+  align-self: stretch;
+}
+
+nav:not(.left, .right) > .space {
+  inline-size: 0.5rem;
+}
+
+nav:not(.left, .right) > .medium-space {
+  inline-size: 1rem;
+}
+
+nav:not(.left, .right) > .large-space {
+  inline-size: 1.5rem;
+}
+
+nav.tabbed {
+  background-color: var(--surface-container);
+  border-radius: 4rem !important;
+  gap: 0rem;
+  overflow-x: auto;
+  block-size: 4rem;
+}
+
+nav.tabbed.small {
+  block-size: 3rem;
+}
+
+nav.tabbed.large {
+  block-size: 5rem;
+}
+
+nav.tabbed > a {
+  border-radius: inherit;
+  block-size: inherit;
+  display: inline-flex;
+  align-items: center;
+  padding-inline: 1rem;
+  gap: 0.5rem;
+  font-size: 1rem;
+  flex: 1;
+}
+
+nav.tabbed > a.active {
+  background-color: var(--primary-container);
+}
+
+@media only screen and (max-width: 600px) {
+  nav.top,
+  nav.bottom {
+    justify-content: space-around;
+  }
+}
