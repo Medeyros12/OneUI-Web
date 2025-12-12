@@ -38,6 +38,11 @@
 @import 'utils/_spacing.css';
 @import 'utils/_frosted.css';
 
+:root {
+    --control-background: #f2f2f3;
+    --background: #fcfcff;
+}
+
 html {
     background-color: var(--background);
     color: var(--text);
